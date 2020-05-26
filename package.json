@@ -1,0 +1,32 @@
+{
+  "name": "pty-create-webcomponent",
+  "version": "1.0.0",
+  "description": "CLI tool to generate Web Component modules for PTY projects",
+  "main": "index.js",
+  "bin": "node index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbence86/pty-create-webcomponent.git"
+  },
+  "keywords": [
+    "Svelte",
+    "Web",
+    "Components",
+    "Custom",
+    "Elements"
+  ],
+  "author": "Bence Varga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vbence86/pty-create-webcomponent/issues"
+  },
+  "homepage": "https://github.com/vbence86/pty-create-webcomponent#readme",
+  "dependencies": {
+    "degit": "^2.8.0",
+    "prompt": "^1.0.0",
+    "update-json-file": "^1.1.1"
+  }
+}
