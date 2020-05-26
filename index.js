@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const degit = require('degit');
 const updateJsonFile = require('update-json-file');
 const prompts = require('prompts');
