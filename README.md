@@ -5,6 +5,8 @@
 ## Usage
 Use [npx](https://www.npmjs.com/package/npx) to execute the CLI without the need of installing any tools locally.
 
+![ezgif com-video-to-gif (23)](https://user-images.githubusercontent.com/6104164/82881532-1bb82e00-9f40-11ea-8472-4a96b470251c.gif)
+
 ```bash
 npx pty-create-webcomponent
 ```
