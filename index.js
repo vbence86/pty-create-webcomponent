@@ -1,17 +1,19 @@
 const degit = require('degit');
 const updateJsonFile = require('update-json-file');
 const prompts = require('prompts');
+const colors = require('colors');
+const packageJson = require('./package.json');
 
 const templateRepo = 'vbence86/pty-wc-template-rollup';
  
 const promptModuleName = async () => {
   const response = await prompts({
-    type: 'string',
+    type: 'text',
     name: 'value',
     message: 'Type the name of the new Web Component?',
     validate: value => value.indexOf('-') === -1
     	? 'Name of the Web Component must contain a "-" character!'
-    	: true;
+    	: true,
   });
   return response.value;
 };
@@ -41,13 +43,24 @@ const updatePackageJson = (moduleName) => {
 };
 
 (async function () {
-	const moduleName = await promptModuleName();
-	await degitTemplate(moduleName);
-	console.log('-----------------------------------------');
-	console.log('Web Component is successfully scaffolded.');
-	console.log('-----------------------------------------');
-	console.log('Usage: ');
-	console.log(`   - cd ${moduleName}`);
-	console.log('   - npm install');
-	console.log('   - npm start');
+	console.log('--------------------------------------------------------------'.gray);
+	console.log('PTY Web Component Generator'.white.bgRed, `(${packageJson.version})`);
+	console.log('--------------------------------------------------------------'.gray);
+	console.log(packageJson.description.white);
+	console.log(packageJson.homepage.gray);
+	console.log('\n');
+
+	try {
+		const moduleName = await promptModuleName();
+		await degitTemplate(moduleName);
+		console.log('-----------------------------------------'.green);
+		console.log('Web Component is successfully scaffolded.'.green);
+		console.log('-----------------------------------------'.green);
+		console.log('Usage: '.gray);
+		console.log(`   - cd ${moduleName}`.white);
+		console.log('   - npm install'.white);
+		console.log('   - npm start'.white);
+	} catch (ex) {
+		console.error(ex.toString().red);
+	}
 })();
