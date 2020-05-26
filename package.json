@@ -1,6 +1,6 @@
 {
   "name": "pty-create-webcomponent",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "CLI tool to generate Web Component modules for PTY projects",
   "main": "index.js",
   "bin": "index.js",
