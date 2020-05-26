@@ -22,7 +22,7 @@ const promptModuleName = async () => {
 
 const degitTemplate = async (moduleName) => {
 	const emitter = degit(templateRepo, {
-		cache: true,
+		cache: false,
 		force: true,
 		verbose: true,
 	});
