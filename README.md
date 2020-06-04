@@ -62,6 +62,8 @@ npm test
 
 <img width="509" alt="Screenshot 2020-05-26 at 12 42 15" src="https://user-images.githubusercontent.com/6104164/82892106-2d550200-9f4f-11ea-835c-8e8f53171660.png">
 
+...after then unit tests pass [bundlesize](https://github.com/siddharthkp/bundlesize) checks the ultimate size of the minimized bundle against the predefined budget size in `bundlesize.config.json`.
+
 ### Styleguide
 
 The code styleguide is defined in [`.eslintrc`](https://eslint.org/docs/user-guide/configuring). It extends the wastly popular **[airbnb](https://www.npmjs.com/package/eslint-config-airbnb)** styleguide and forces all functions to be equipped with [jsdoc](https://jsdoc.app/) annotations.
